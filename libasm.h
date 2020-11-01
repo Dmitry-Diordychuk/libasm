@@ -6,15 +6,15 @@
 /*   By: kdustin <kdustin@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/31 18:22:39 by kdustin           #+#    #+#             */
-/*   Updated: 2020/10/31 18:48:38 by kdustin          ###   ########.fr       */
+/*   Updated: 2020/11/01 10:15:17 by kdustin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBASM_H
-#define LIBASM_H
+# define LIBASM_H
 
-#include <stdio.h>
-#include <errno.h>
+# include <stdio.h>
+# include <errno.h>
 
 size_t	ft_strlen(const char *s);
 char	*ft_strcpy(char *dest, const char *src);

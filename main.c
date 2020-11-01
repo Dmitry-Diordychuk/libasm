@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kdustin <kdustin@student.21-school.ru>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/01 10:16:11 by kdustin           #+#    #+#             */
+/*   Updated: 2020/11/01 11:38:34 by kdustin          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libasm.h"
 #include <stdio.h>
 #include <string.h>
 #include <fcntl.h>
 #include <unistd.h>
-#include "libasm.h"
 
 int main(void)
 {
@@ -25,22 +37,10 @@ int main(void)
 	printf("%s\n", strcpy(dest, src));
 	printf("%s\n", ft_strcpy(dest, src));
 
-	dest = strdup("Hello!");
-	src = strdup("Hello!");
-	printf("%d\n", strcmp(dest, src));
-	printf("%d\n", ft_strcmp(dest, src));
-	dest = strdup("Hello!");
-	src = strdup("Hel");
-	printf("%d\n", strcmp(dest, src));
-	printf("%d\n", ft_strcmp(dest, src));
-	dest = strdup("Hel");
-	src = strdup("Hello!");
-	printf("%d\n", strcmp(dest, src));
-	printf("%d\n", ft_strcmp(dest, src));
-	dest = strdup("Heioy!");
-	src = strdup("Hello!");
-	printf("%d\n", strcmp(dest, src));
-	printf("%d\n", ft_strcmp(dest, src));
+	printf("__________________________strcmp________________________________________________\n");
+	printf("%d\n", ft_strcmp("", ""));
+	//printf("%d\n", ft_strcmp("bon", "bon"));
+
 
 	ft_write(1, "Hello, world!\n", 14);
 	

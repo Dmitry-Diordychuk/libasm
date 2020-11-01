@@ -1,11 +1,12 @@
 NAME = libasm.a
 
-OBJS = 	ft_read.o 	\
-		ft_strcmp.o	\
+OBJS =	ft_strlen.o \
 		ft_strcpy.o	\
-		ft_strdup.o \
-		ft_strlen.o	\
-		ft_write.o
+		ft_strcmp.o	\
+		ft_write.o	\
+		ft_read.o 	\
+		ft_strdup.o
+
 
 CFLAGS = -Wall -Wextra -Werror
 
@@ -23,10 +24,11 @@ clean:
 
 fclean: clean
 	rm -f $(NAME)
+	rm -f a.out
 
 re:
 	$(MAKE) fclean
 	$(MAKE) all
 
 test:
-	$(CC) $(CFLAGS) -L. -lasm main.c -o test
+	$(CC) $(CFLAGS) main.c $(NAME) -I.
